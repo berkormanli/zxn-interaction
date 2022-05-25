@@ -1,0 +1,171 @@
+/* Nice font for button from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 300;
+}
+
+.circle {
+    display: block;
+    position: absolute;
+    opacity: 0%;
+    left: 50%;
+    top: 50%;
+    width:40px;
+    height:40px;
+    border: 5px solid #999999;
+    border-radius: 50%;
+}
+  
+.key {
+    position:absolute;
+    width:40px;
+    height:40px;
+}
+  
+.key > p {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    color: #6c6c6c;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align:center;
+    line-height: 40px;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.fadeIn {
+    animation: fade 2s ease-in 0s 1 normal;
+}
+
+.fadeOut {
+    animation: fade 2s ease-in 0s 1 reverse;
+}
+
+#container {
+    position: absolute;
+    height: auto;
+    border-radius: 5px;
+    background: transparent !important;
+    transform: perspective(6cm) rotateX(0deg) rotateY(355deg) rotateZ(0deg);
+}
+
+#buttons {
+    max-height: 75vh;
+    width: 100%;
+    overflow-x: none;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+html,
+body {
+    background: transparent !important;
+}
+
+#buttons::-webkit-scrollbar {
+    display: block;
+}
+
+body::-webkit-scrollbar {
+    display: block;
+}
+
+.button {
+    width: auto;
+    max-width: 100%;
+    height: 10%;
+    background: rgba(23, 23, 23, 55%);
+    color: white;
+    position: relative;
+    top: 10%;
+    margin-top: 0.05rem;
+    overflow: hidden;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(23, 23, 23, 80%);
+}
+
+.title {
+    width: auto;
+    max-width: 100%;
+    height: 10%;
+    background: rgba(23, 23, 23, 90%);
+    color: white;
+    position: relative;
+    top: 10%;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    padding: 0.45rem;
+    border-radius: 0.15rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
+}
+
+div > .text {
+    flex-direction: column;
+    font-size: 0.75rem;
+    overflow: hidden;
+}
+
+div > .header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: left;
+    overflow: wrap;
+    color: rgba(244, 213, 30, 90%);
+    font-size: 0.9rem;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+div > .header:hover  {
+    color: rgba(244, 233, 30, 100%);
+}
+
+.animation-openFromMiddle {
+    animation: anime 1.0s ease-in 0s 1
+}
+
+.animation-closeFromMiddle {
+    animation: animeClose 1.0s ease-in 0s 1
+}
+
+@keyframes anime {
+  from {
+    opacity: 0;
+    transform: scaleY(0.0) perspective(0cm) rotateX(0deg) rotateY(355deg) rotateZ(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1.0) perspective(6cm) rotateX(0deg) rotateY(355deg) rotateZ(0deg);
+  }
+}
+
+@keyframes animeClose {
+  from {
+    opacity: 1;
+    transform: scaleY(1.0) perspective(6cm) rotateX(0deg) rotateY(355deg) rotateZ(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0.0) perspective(0cm) rotateX(0deg) rotateY(355deg) rotateZ(0deg);
+  }
+}
